@@ -14,9 +14,13 @@ export const useStyles = (isLarge: boolean) =>
           width: isLarge ? PARENT_CONTAINER_WIDTH : ITEM_WIDTH,
         },
         label: {
-          fontSize: 20,
+          fontSize: 18,
           fontWeight: '400',
           lineHeight: 26,
+        },
+        name: {
+          fontSize: 14,
+          lineHeight: 20,
         },
       }),
     [isLarge]
