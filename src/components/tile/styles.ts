@@ -17,10 +17,12 @@ export const useStyles = (isLarge: boolean) =>
           fontSize: 18,
           fontWeight: '400',
           lineHeight: 26,
+          color: '#272727'
         },
         name: {
           fontSize: 14,
           lineHeight: 20,
+          color: '#6c6c6c'
         },
       }),
     [isLarge]
