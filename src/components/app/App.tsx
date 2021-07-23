@@ -47,7 +47,7 @@ export const App: FC<AppProps> = ({
         <Stack.Navigator initialRouteName={initialScreen}>
           <Stack.Screen
             name="showcase"
-            options={{ title: 'Main', headerShown: false }}
+            options={{ title: '返回', headerShown: false }}
           >
             {() => <TileList data={data} {...rest} />}
           </Stack.Screen>
