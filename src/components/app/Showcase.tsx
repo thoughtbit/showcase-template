@@ -1,4 +1,5 @@
 import React, { FC, useMemo } from 'react';
+import { StyleSheet, Platform } from 'react-native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { TileList } from '../tileList';
 import type { AppProps, ExampleScreenType } from './types';
@@ -20,7 +21,23 @@ export const Showcase: FC<AppProps> = ({
   );
   return (
     <>
-    <Stack.Navigator initialRouteName={initialScreen}>
+    <Stack.Navigator initialRouteName={initialScreen} screenOptions={{
+      headerStyle: {
+        elevation: 0,
+        borderBottomWidth: StyleSheet.hairlineWidth,
+      },
+      headerTintColor: '#6c6c6c',
+      headerTitleStyle: {
+        fontWeight: Platform.OS === 'ios' ? '600' : '400',
+        color: '#272727',
+      },
+      headerBackTitleVisible: false,
+      headerTitleAlign: 'center',
+      cardStyle: {
+        flex: 1,
+        backgroundColor:'#fff',
+      },
+    }}>
       <Stack.Screen
         name="showcase"
         options={{ title: '返回', headerShown: false }}
