@@ -11,7 +11,7 @@ import type { AppProps, ExampleScreenType } from './types';
 
 const Stack = createStackNavigator();
 
-export const App: FC<AppProps> = ({
+export const ShowcaseApp: FC<AppProps> = ({
   initialScreen = 'showcase',
   data,
   ...rest
